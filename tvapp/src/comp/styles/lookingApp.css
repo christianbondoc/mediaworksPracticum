@@ -1,0 +1,41 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f2f2f2;
+    background: url(../img/bcitBG-1.jpg); /* Change BGs later */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mainTxt {
+    font-size: 10em;
+    color: #fff;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 6px #000;
+    max-width: 40vw;
+}
+
+
+.confirmBtn {
+    font-size: 5em;
+    background: #F7EDB8;
+    border-radius: 60px;
+    width: 15vw;
+    height: 10vh;
+}
+
+.confirmBtn:active {
+    background: #f2e291;
+    box-shadow: 5px 10px #888;
+}
