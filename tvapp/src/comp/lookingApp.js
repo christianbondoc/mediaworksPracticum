@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import styles from './comp/styles/lookingApp.css';
+import styles from './styles/lookingApp.css';
 
 class lookingApp extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-        }
+        
+        };
 
     }
 

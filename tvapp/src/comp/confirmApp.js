@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import styles from './comp/styles/confirmApp.css';
+import styles from './styles/confirmApp.css';
 
 class confirmApp extends Component {
+    
     constructor(props) {
         super(props);
         this.state = {
 
-        }
+        };
 
     }
 
@@ -14,7 +15,7 @@ class confirmApp extends Component {
         return (
             <div className="wrapper">
                 <h1 className="mainTxt">Do you want to email </h1>
-                <button className="confirmBtn" type="submit">Sign in</button>
+                <button className="confirmBtn" type="submit" onClick={this.props.changePage.bind(this, 0)}>Sign in</button>
                 <h1 className="mainTxt">Thank you for using (Brand Name) </h1>
                 <h1 className="mainTxt">(studentB) will be contacted </h1>
             </div>

@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import styles from './comp/styles/positionApp.css';
+import styles from './styles/positionApp.css';
 
 class positionApp extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-        }
+        
+        };
 
     }
-
 
     render() {
         return (
@@ -34,7 +34,7 @@ class positionApp extends Component {
                     </div>
                 </div>
 
-                <button className="searchBtn" type="submit"> Start </button>
+                <button className="searchBtn" type="submit" onClick={this.props.changePage.bind(this, 3)}> Start </button>
 
             </div>
         );
