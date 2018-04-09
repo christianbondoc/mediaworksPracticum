@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import styles from './comp/styles/App.css';
 
 // Import the seperate components.
+import PositionApp from './comp/positionApp.js';
 import ConfirmApp from './comp/confirmApp.js';
 import LookingApp from './comp/lookingApp.js';
-import PositionApp from './comp/positionApp.js';
 
 class App extends Component {
     

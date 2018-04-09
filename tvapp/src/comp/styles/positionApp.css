@@ -7,7 +7,7 @@ body {
 .wrapper {
     display: flex;
     text-align: center;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -16,6 +16,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 
 .container {
     display: flex;

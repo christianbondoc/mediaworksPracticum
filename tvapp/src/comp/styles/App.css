@@ -73,3 +73,75 @@ html, body {
   text-shadow: 2px 2px 6px #000;
   margin: 50px;
 }
+
+/* POSITIONAPP */
+
+.wrapper-row {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50vw;
+  
+}
+
+.left {
+  background: #fff;
+}
+
+.content {
+  max-height: 50vh;
+  font-size: 5em;
+  color: #555B6E;
+  letter-spacing: 2px;
+}
+
+.positionB {
+  font-size: 0.5em;
+}
+
+.searchBtn {
+  position: absolute;
+  max-width: 50vw;
+  bottom: 27.5vh;
+  font-size: 5em;
+  background: #F7EDB8;
+  border-radius: 60px;
+  width: 15vw;
+  height: 10vh;
+}
+
+.searchBtn:active {
+  background: #f2e291;
+  box-shadow: 5px 10px #888;
+}
+
+.positionBtn {
+  font-size: 0.5em;
+  width: 30vw;
+  height: 5vh;
+  margin: 25px;
+}
+.styleBtn1 {
+  background: #555B6E;
+  color: #f2f2f2;
+}
+.styleBtn2 {
+  color: #555B6E;
+  background: #fff;
+}

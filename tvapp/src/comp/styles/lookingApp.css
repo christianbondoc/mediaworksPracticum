@@ -26,6 +26,13 @@ body {
     max-width: 40vw;
 }
 
+.secondaryTxt {
+    font-size: 5em;
+    color: #fff;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 6px #000;
+    max-width: 25vw;
+}
 
 .confirmBtn {
     font-size: 5em;
