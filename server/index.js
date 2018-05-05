@@ -14,11 +14,15 @@ MongoClient.connect(url, function (err, db) {
     }
 
     hiveDB.collection("users").insertOne(newUser, (err, res) => {
-        console.log("New User Added");
+        console.log("New User Added");   
+        
+        // query for the newUser.
+        var query = hiveDB.collection('users').find({ name: "Christian Bondoc" });
+        console.log("Users listed below:");
+        console.log(query);
+        
         db.close();
     });
-
-
 
 });
 
