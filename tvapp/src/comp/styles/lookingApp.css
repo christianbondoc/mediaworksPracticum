@@ -13,7 +13,7 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: #f2f2f2;
-    background: url(../img/bcitBG-1.jpg); /* Change BGs later */
+    background: url(../img/bcitBG-1.png); /* Change BGs later */
     background-repeat: no-repeat;
     background-size: cover;
 }

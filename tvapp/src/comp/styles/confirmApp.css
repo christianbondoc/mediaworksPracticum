@@ -13,7 +13,7 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: #f2f2f2;
-    background: url(../img/bcitBG-1.jpg);
+    background: url(../img/bcitBG-1.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -125,7 +125,14 @@ body {
     height: 10vh;
 }
 
+
 .searchBtn:active {
     background: #f2e291;
     box-shadow: 5px 10px #888;
+}
+
+.logoImg {
+    background: url("../img/hiveLogo.svg") no-repeat center center;
+    width: 25vw;
+    height: 25vh;
 }

@@ -17,8 +17,12 @@ class lookingApp extends Component {
             <div className="wrapper">
                 <div className="container left">
                     <div className="content">
-                        <h1 className="intro-center"> You are a </h1>
-                        <h2 className="positionA"> (do the props thing) </h2>
+                        <h1 className="intro-center"> 
+                        
+                        data={this.state.data}</h1>
+                        <h2 className="positionA"> 
+
+                        </h2>
                     </div>
                 </div>
 

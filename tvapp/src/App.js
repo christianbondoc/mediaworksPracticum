@@ -11,11 +11,13 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            pageNum: 0
+            pageNum: 0,
+            userInput: ''
         };
         
         this.signIn = this.signIn.bind(this);
         this.changePage = this.changePage.bind(this);
+        this.handleInput = this.handleInput.bind(this);
     }
     
     // Use this function when signing in
@@ -28,8 +30,17 @@ class App extends Component {
     // Function to change the page
     changePage(num) {
         this.setState({
-            pageNum: num
+            pageNum: num,
         });
+    }
+
+
+    handleInput(evt){
+        const data = {
+            [evt.target.name]: evt.target.value
+        };
+        this.setState(data);
+        this.props.onChange(data);
     }
 
     render() {
@@ -39,11 +50,24 @@ class App extends Component {
         if (pageNum == 0) {
             comp = (
                 <div className="wrapper">
-                    <h1 className="appTitle">Find your next project partner </h1>
-                    <input className="bcitID" type="text" placeholder="BCIT ID" />
+                    
+                    <div className="logoImg"> </div>
+
+                    <input 
+                        className="bcitID" 
+                        type="text" 
+                        placeholder="BCIT ID" 
+                        alt="bcitID"
+                        
+                        onChange={data => { this.setState({ data }) }}
+
+                    />
                     <button className="startBtn" type="submit" onClick={this.signIn}>Sign in</button>
                     <h7 className="signupLink"> Head to (siteName) to register </h7>
+
+                    <div className="blueSquare"></div>
                 </div>
+                
             );
         }
         else if (pageNum == 2) {
@@ -60,6 +84,7 @@ class App extends Component {
         return (
             <div>
                 {comp}
+                
             </div>
         );
     }

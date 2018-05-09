@@ -54,10 +54,16 @@ body {
   width: 50vw;
   justify-content: center;
   align-items: center;
+
 }
 
 .right {
   background: #fff;
+}
+
+.left {
+  background: #003e6b;
+  color: #fff;
 }
 
 .mainTxt {
@@ -98,3 +104,13 @@ body {
   width: 5vw;
   height: 5vh;
 }
+.logoImg {
+  background: url("../img/hiveLogo.svg") no-repeat center center;
+  height: 25vh;
+  margin-bottom: 20px;
+}
+
+.bgColor {
+  background-color: #fff;
+}
+

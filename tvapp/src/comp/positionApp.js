@@ -30,8 +30,8 @@ class positionApp extends Component {
                 <div className="wrapper-row">
                     <div className="container left">
                         <div className="content">
-                            <h1 className="intro-center"> You are a</h1>
-                            <h2 className="positionA"> Sumting </h2>
+                            <h1 className="intro-center"> Your BCIT ID: </h1>
+                            <h2 className="positionA"> data={this.state.data}</h2>
                         </div>
                     </div>
 
@@ -56,8 +56,8 @@ class positionApp extends Component {
                 <div className="wrapper-row">
                     <div className="container left">
                         <div className="content">
-                            <h1 className="intro-center"> You are a</h1>
-                            <h2 className="positionA"> Sumting </h2>
+                            <h1 className="intro-center"> Your ID: </h1>
+                            <h2 className="positionA"> data={this.state.data} </h2>
                         </div>
                     </div>
 

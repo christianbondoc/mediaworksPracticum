@@ -21,6 +21,7 @@ class App extends Component {
       comp = (
         <div className='wrapper'>
           <div className="intro-container">
+            <div className="logoImg"> </div>
           <h1 className="mainTxt"> 
           Register for BCIT Hive </h1>
             <button className="mainBtn" onClick={((() => { this.setState({ pgNum: 1 }) }))}>Register Now</button> 
@@ -33,13 +34,13 @@ class App extends Component {
       comp = (
         <div className="wrapper-row">
           <div className="container left">
-
             <h1 className="mainTxt">Who are you?</h1>
             <input className="input" placeholder= "Your Name" />
             <input className="input" placeholder= "BCIT ID" />
             <input className="input" placeholder= "BCIT Email" />
             <input className="input" placeholder= "Program" />
           </div>
+
 
           <button className="searchBtn" onClick={((() => { this.setState({ pgNum: 2 }) }))}> Search Now </button> 
 
@@ -63,6 +64,7 @@ class App extends Component {
         comp = (
           <div className='wrapper'>
             <div className="intro-container">
+            <div className="logoImg"> </div>
               <h1 className="mainTxt">
                 Thanks for using BCIT Hive </h1>
               <button className="mainBtn" onClick={((() => { this.setState({ pgNum: 0 }) }))}>Home</button>
