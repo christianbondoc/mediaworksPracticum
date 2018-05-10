@@ -68,10 +68,10 @@ class positionApp extends Component {
                         Create a function here to list out choices from DB
                         </h2>
 
-                        <button className="positionBtn styleBtn1" type="submit" onClick={this.props.changePage.bind(this, 3)}> Hit this nigga up </button>
-                        <button className="positionBtn styleBtn2" type="submit" onClick={this.props.changePage.bind(this, 3)}> Hit this nigga up </button>
-                        <button className="positionBtn styleBtn1" type="submit" onClick={this.props.changePage.bind(this, 3)}> Hit this nigga up </button>
-                        <button className="positionBtn styleBtn2" type="submit" onClick={this.props.changePage.bind(this, 3)}> Hit this nigga up </button>
+                        <button className="positionBtn styleBtn1" type="submit" onClick={this.props.changePage.bind(this, 3)}> Hit this person up </button>
+                        <button className="positionBtn styleBtn2" type="submit" onClick={this.props.changePage.bind(this, 3)}> Hit this person up </button>
+                        <button className="positionBtn styleBtn1" type="submit" onClick={this.props.changePage.bind(this, 3)}> Hit this person up </button>
+                        <button className="positionBtn styleBtn2" type="submit" onClick={this.props.changePage.bind(this, 3)}> Hit this person up </button>
 
                     </div>
                 </div>

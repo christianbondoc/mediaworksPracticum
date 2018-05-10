@@ -41,14 +41,12 @@ body {
 .positionB {
     font-size: 0.5em;
 }
-
 .searchBtn {
     position: absolute;
     max-width: 50vw;
     bottom: 15vh;
     font-size: 5em;
     background: #F7EDB8;
-    border-radius: 60px;
     width: 15vw;
     height: 10vh;
 }

@@ -51,12 +51,14 @@ class App extends Component {
             comp = (
                 <div className="wrapper">
                     
+                    <div className="bcitHeader">BRITISH COLUMBIA INSTITUTE OF TECHNOLOGY</div>
+
                     <div className="logoImg"> </div>
 
                     <input 
                         className="bcitID" 
                         type="text" 
-                        placeholder="BCIT ID" 
+                        placeholder="STUDENT ID" 
                         alt="bcitID"
                         
                         onChange={data => { this.setState({ data }) }}
@@ -64,7 +66,6 @@ class App extends Component {
                     />
                     <button className="startBtn" type="submit" onClick={this.signIn}>Sign in</button>
                     <h7 className="signupLink"> Head to (siteName) to register </h7>
-
                     <div className="blueSquare"></div>
                 </div>
                 
@@ -73,6 +74,7 @@ class App extends Component {
         else if (pageNum == 2) {
             comp = <PositionApp 
                         changePage={this.changePage}
+                        data={this.state.data}
                     />;
         }
         else if (pageNum == 3) {

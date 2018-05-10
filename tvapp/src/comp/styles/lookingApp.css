@@ -37,9 +37,8 @@ body {
 .confirmBtn {
     font-size: 5em;
     background: #F7EDB8;
-    border-radius: 60px;
     width: 15vw;
-    height: 10vh;
+    height: 5vh;
 }
 
 .confirmBtn:active {

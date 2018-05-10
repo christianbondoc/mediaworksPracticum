@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import styles from './styles/confirmApp.css';
+// import styles from './styles/confirmApp.css';
+import styles from './styles/App.css';
 
 class confirmApp extends Component {
     
