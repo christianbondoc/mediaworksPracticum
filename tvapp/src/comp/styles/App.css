@@ -22,7 +22,7 @@ html, body {
   overflow: hidden;
 }
 
-.appTitle {
+.appTitle, .mainTxt, .secondaryTxt{
   font-size: 10em;
   color: #fff;
   letter-spacing: 2px;
@@ -57,16 +57,16 @@ html, body {
   text-align: center;
 }
 
-.startBtn {
+.startBtn, .confirmBtn {
   font-size: 5em;
-background: rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0);
   color: #FFF0A0;
   border: 5px solid #FFF0A0;
   width: 15vw;
   height: 5vh;
 }
 
-.startBtn:active{
+.startBtn:active, .confirmBtn:active{
   box-shadow: 5px 10px #888;
   /* animation: blueSquareAni 2s forwards; */
 }
@@ -119,14 +119,19 @@ background: rgba(255, 255, 255, 0);
   font-size: 0.5em;
 }
 
-.searchBtn {
-  position: absolute;
-  max-width: 50vw;
-  bottom: 27.5vh;
-  font-size: 5em;
-background: rgba(255, 255, 255, 0);
-  width: 15vw;
-  height: 5vh;
+
+
+.contBtn {
+  position: fixed;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: help;
+}
+.STspan {
+  color: #f2f2f2;
 }
 
 .searchBtn:active {
@@ -143,15 +148,15 @@ background: rgba(255, 255, 255, 0);
   width: 30vw;
   height: 5vh;
   margin: 25px;
-}
-.styleBtn1 {
   background: #555B6E;
   color: #f2f2f2;
 }
-.styleBtn2 {
+
+.positionBtn:nth-child(odd) {
   color: #555B6E;
   background: #fff;
 }
+
 .logoImg {
   background: url("../img/hiveLogo.svg") no-repeat center center;
   width: 25vw;
@@ -169,7 +174,6 @@ background: rgba(255, 255, 255, 0);
   color: #fff;
   text-align: left;
   font-size: 3em;
-
 }
 
 
@@ -200,4 +204,18 @@ background: rgba(255, 255, 255, 0);
     width: 50vw;
     height: 100vh;
   }
+}
+
+.hex{
+  position: fixed;
+  width: 25vw;
+  height: 52vh;
+  background: url("../img/hex.svg") no-repeat;
+  background-size: cover;
+  left: 0px;
+  bottom: 0;
+  stroke-dasharray: 100;
+  pointer-events: none;
+  
+
 }

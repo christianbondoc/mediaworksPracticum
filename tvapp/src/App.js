@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+// import { BrowserRouter } from 'react-router-dom';
 import styles from './comp/styles/App.css';
 
 // Import the seperate components.
 import PositionApp from './comp/positionApp.js';
 import ConfirmApp from './comp/confirmApp.js';
-import LookingApp from './comp/lookingApp.js';
+
 
 class App extends Component {
     
@@ -19,6 +20,7 @@ class App extends Component {
         this.changePage = this.changePage.bind(this);
         this.handleInput = this.handleInput.bind(this);
     }
+
     
     // Use this function when signing in
     signIn() {
@@ -26,7 +28,7 @@ class App extends Component {
             pageNum: 2
         });
     }
-    
+
     // Function to change the page
     changePage(num) {
         this.setState({
@@ -36,12 +38,12 @@ class App extends Component {
 
 
     handleInput(evt){
-        const data = {
-            [evt.target.name]: evt.target.value
-        };
-        this.setState(data);
-        this.props.onChange(data);
+        const userInput = evt.target.value;
+        this.setState({userInput});
+
     }
+
+
 
     render() {
         var comp;
@@ -51,17 +53,22 @@ class App extends Component {
             comp = (
                 <div className="wrapper">
                     
-                    <div className="bcitHeader">BRITISH COLUMBIA INSTITUTE OF TECHNOLOGY</div>
+
 
                     <div className="logoImg"> </div>
 
                     <input 
+                        ref="testInput"
+                        
                         className="bcitID" 
                         type="text" 
                         placeholder="STUDENT ID" 
                         alt="bcitID"
+                        onChange={(evt)=> {
+                            this.setState({userInput: this.refs.testInput.value});
+                            console.log(this.state.userInput);
+                            }}
                         
-                        onChange={data => { this.setState({ data }) }}
 
                     />
                     <button className="startBtn" type="submit" onClick={this.signIn}>Sign in</button>
@@ -74,7 +81,7 @@ class App extends Component {
         else if (pageNum == 2) {
             comp = <PositionApp 
                         changePage={this.changePage}
-                        data={this.state.data}
+                        userInput={this.state.userInput}
                     />;
         }
         else if (pageNum == 3) {
@@ -85,6 +92,7 @@ class App extends Component {
         
         return (
             <div>
+                <div className="bcitHeader">BRITISH COLUMBIA INSTITUTE OF TECHNOLOGY</div>
                 {comp}
                 
             </div>
