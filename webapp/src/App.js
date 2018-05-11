@@ -9,9 +9,18 @@ class App extends Component {
       this.state = {
         pgNum: 0
       };
+        
+        this.testingDBinput = this.testingDBinput.bind(this);
     }
 
-
+    testingDBinput() {
+        this.socket=mySocket("http://localhost:10002/");
+        this.socket.emit("addUser", null); 
+        console.log('almost works!');
+        this.setState({
+            pgNum: 2
+        })
+    }
 
   render() {
     var comp;
@@ -42,7 +51,7 @@ class App extends Component {
           </div>
 
 
-          <button className="searchBtn" onClick={((() => { this.setState({ pgNum: 2 }) }))}> Search Now </button> 
+          <button className="searchBtn" onClick={this.testingDBinput}> Search Now </button> 
 
           <div className="container right">
           <h1 className="mainTxt">Skillset/Program</h1>
