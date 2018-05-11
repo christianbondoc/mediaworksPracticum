@@ -19,7 +19,7 @@ class positionApp extends Component {
                     <div className="container left">
                         <div className="content">
                             <h1 className="intro-center"> Your BCIT ID: </h1>
-                            <h2 className="positionA"> data={this.state.data}</h2>
+                            <h2 className="positionA"> {this.props.userInput}</h2>
                             <div className="hex"></div>
                         </div>
                     </div>
