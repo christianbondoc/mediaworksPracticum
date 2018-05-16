@@ -14,26 +14,27 @@ var io = require("socket.io")(server);
 
 
 io.on("connection", function(socket){
-    socket.on("addUser", function(){
+    socket.on("addUser", function(data){
         console.log('gets here.')
         MongoClient.connect(url, function (err, db) {
             if (err) throw err;
             var hiveDB = db.db("bcit_hive");
 
+            // hard code, no longer used
             var newUser = {
-                name: 'Daren Capacio',
-                bcit: 'A00966187',
-                bEmail: 'dcapacio2@bcit.ca',
+                name: 'Katrhina Hernandez',
+                bcit: 'A00xxxxxx',
+                bEmail: 'k_hernan@bcit.ca',
                 program: 'D3 Digital Design Development'
             }
 
-            hiveDB.collection("users").insertOne(newUser, (err, res) => {
+            hiveDB.collection("users").insertOne(data, (err, res) => {
                 console.log("New User Added");   
 
                 // query for the newUser.
                 var query = hiveDB.collection('users').find({ name: "Christian Bondoc" });
-                console.log("Users listed below:");
-                console.log(query);
+                // console.log("Users listed below:");
+                // console.log(query);
 
                 db.close();
             });

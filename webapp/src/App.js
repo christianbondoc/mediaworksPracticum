@@ -8,19 +8,58 @@ class App extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        pgNum: 0
+        pgNum: 0,
+        name: '',
+        bcit: '',
+        bEmail: '',
+        program: ''
       };
         
         this.testingDBinput = this.testingDBinput.bind(this);
+        this.upName = this.upName.bind(this);
+        this.upID = this.upID.bind(this);
+        this.upEmail = this.upEmail.bind(this);
+        this.upProgram = this.upProgram.bind(this);
     }
 
     testingDBinput() {
         this.socket=mySocket("http://localhost:10002/");
-        this.socket.emit("addUser", null); 
+        var data = {
+          name: this.state.name,
+          bcit: this.state.bcit,
+          bEmail: this.state.bEmail,
+          program: this.state.program
+        };
+        this.socket.emit("addUser", data); 
         console.log('almost works!');
         this.setState({
             pgNum: 2
         })
+    }
+
+    upName(ev) {
+      this.setState({
+        name: ev.target.value
+      })
+      console.log(this.state.name);
+    }
+
+    upID(ev) {
+      this.setState({
+        bcit: ev.target.value
+      })
+    }
+
+    upEmail(ev) {
+      this.setState({
+        bEmail: ev.target.value
+      })
+    }
+
+    upProgram(ev) {
+      this.setState({
+        program: ev.target.value
+      })
     }
 
   render() {
@@ -45,10 +84,10 @@ class App extends Component {
         <div className="wrapper-row">
           <div className="container left">
             <h1 className="mainTxt">Who are you?</h1>
-            <input className="input" placeholder= "Your Name" />
-            <input className="input" placeholder= "BCIT ID" />
-            <input className="input" placeholder= "BCIT Email" />
-            <input className="input" placeholder= "Program" />
+            <input className="input" onChange={this.upName} placeholder= "Your Name" />
+            <input className="input" onChange={this.upID} placeholder= "BCIT ID" />
+            <input className="input" onChange={this.upEmail} placeholder= "BCIT Email" />
+            <input className="input" onChange={this.upProgram} placeholder= "Program" />
           </div>
 
 
