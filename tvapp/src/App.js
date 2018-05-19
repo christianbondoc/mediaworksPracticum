@@ -19,6 +19,7 @@ class App extends Component {
         this.signIn = this.signIn.bind(this);
         this.changePage = this.changePage.bind(this);
         this.handleInput = this.handleInput.bind(this);
+        this.studentIDInput = this.studentIDInput.bind(this);
     }
 
     
@@ -36,7 +37,13 @@ class App extends Component {
         });
     }
 
-
+    studentIDInput(e) {
+        const reg = /[Aa0-9]/gm;
+        if (!reg.test(e.key)){
+            e.preventDefault();
+        } 
+    }
+    
     handleInput(evt){
         const userInput = evt.target.value;
         this.setState({userInput});
@@ -53,12 +60,14 @@ class App extends Component {
             comp = (
                 <div className="wrapper">
                     <div className="logoImg"> </div>
-                    <input 
+                    <input
+                        
                         ref="testInput"
                         className="bcitID" 
                         type="text" 
                         placeholder="STUDENT ID" 
                         alt="bcitID"
+                        onKeyPress={(e) => this.studentIDInput(e)}
                         onChange={(evt)=> {
                             this.setState({userInput: this.refs.testInput.value});
                             console.log(this.state.userInput);
@@ -86,7 +95,7 @@ class App extends Component {
         
         return (
             <div>
-                <div className="bcitHeader">BRITISH COLUMBIA INSTITUTE OF TECHNOLOGY</div>
+                <div className="bcitHeader">BRITISH COLUMBIA INSTITUTE OF TECHNOLOGY - MEDIAWORKS</div>
                 {comp}
                 
             </div>

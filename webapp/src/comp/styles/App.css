@@ -7,6 +7,10 @@ body {
 
 /* PAGE ONE */
 
+* {
+  font-family: Rajdhani, Arial, Helvetica, sans-serif;
+}
+
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -15,20 +19,28 @@ body {
   background-color: #f2f2f2;
   justify-content: center;
   align-items: center;
+  background: url(../img/bcitBG-1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .intro-container {
-  color: #555B6E;
+  color: #f2f2f2;
   font-size: 1em;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .mainBtn {
+  background: rgba(255, 255, 255, 0);
+  color: #FFF0A0;
+  border: 5px solid #FFF0A0;
+  width: 15vw;
+  height: 5vh;
   font-size: 1em;
-  background: #F7EDB8;
-  border-radius: 60px;
-  height: 50px;
 }
 
 .mainBtn:active {
@@ -98,19 +110,31 @@ body {
 .searchBtn {
   position: absolute;
   max-width: 50vw;
-  bottom: 27.5vh;
-  background: #F7EDB8;
-  border-radius: 5px;
-  width: 5vw;
+  bottom: 25vh;
+  background: rgba(255, 240, 160, 1);
+  color: #000;
+  border: 5px solid #FFF0A0;
+  width: 15vw;
   height: 5vh;
+  font-size: 1em;
 }
 .logoImg {
   background: url("../img/hiveLogo.svg") no-repeat center center;
+  width: 25vw;
   height: 25vh;
-  margin-bottom: 20px;
 }
 
 .bgColor {
   background-color: #fff;
 }
 
+.bcitHeader {
+  width: 100vw;
+  height: 2.5vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: #323232;
+  color: #fff;
+  text-align: left;
+}

@@ -14,12 +14,16 @@ class App extends Component {
         bEmail: '',
         program: ''
       };
-        
+        // -- DB Functions -- //
         this.testingDBinput = this.testingDBinput.bind(this);
         this.upName = this.upName.bind(this);
         this.upID = this.upID.bind(this);
         this.upEmail = this.upEmail.bind(this);
         this.upProgram = this.upProgram.bind(this);
+
+        // -- Regex JSX Function -- //
+        this.studentIDInput = this.studentIDInput.bind(this);
+
     }
 
     testingDBinput() {
@@ -62,6 +66,13 @@ class App extends Component {
       })
     }
 
+  studentIDInput(e) {
+    const reg = /[0-9Aa]+/g;
+    if (!reg.test(e.key)) {
+      e.preventDefault();
+    }
+  }
+
   render() {
     var comp;
     var pgNum = this.state.pgNum;
@@ -84,8 +95,8 @@ class App extends Component {
         <div className="wrapper-row">
           <div className="container left">
             <h1 className="mainTxt">Who are you?</h1>
-            <input className="input" onChange={this.upName} placeholder= "Your Name" />
-            <input className="input" onChange={this.upID} placeholder= "BCIT ID" />
+            <input className="input" onChange={this.upName} placeholder= "First & Last Name" />
+            <input className="input" onChange={this.upID} placeholder="BCIT ID" onKeyPress={(e) => this.studentIDInput(e)} />
             <input className="input" onChange={this.upEmail} placeholder= "BCIT Email" />
             <input className="input" onChange={this.upProgram} placeholder= "Program" />
           </div>
@@ -96,7 +107,6 @@ class App extends Component {
           <div className="container right">
           <h1 className="mainTxt">Skillset/Program</h1>
             <div className="content">
-              <h1 className="intro-center"> Looking for a </h1>
               <select className="positionB">
                 <option value="Graphic Designer"> Graphic Designer </option>
                 <option value="Web Designer"> Web Designer </option>
@@ -126,6 +136,7 @@ class App extends Component {
 
     return (
       <div>
+        <div className="bcitHeader">BRITISH COLUMBIA INSTITUTE OF TECHNOLOGY - MEDIAWORKS</div>
         {comp}
       </div>
     );

@@ -31,8 +31,9 @@ class positionApp extends Component {
                                 <option value="Graphic Designer"> Graphic Designer </option>
                                 <option value="Web Designer"> Web Designer </option>
                                 <option value="Software Developer"> Software Developer </option>
-                                <option value="Woodworker">Carpentry</option>
+                                <option value="Woodworker">Woodworker</option>
                                 <option value="Metal Working">Metal Working</option>
+                                <option value="Applied Data Analytics">Applied Data Analytics</option>
                             </select>
                         </div>
                     </div>
@@ -45,7 +46,7 @@ class positionApp extends Component {
                 <div className="wrapper-row">
                     <div className="container left">
                         <div className="content">
-                            <h1 className="intro-center"> Your ID: </h1>
+                            <h1 className="intro-center"> Your BCIT ID: </h1>
                             <h2 className="positionA"> {this.props.userInput}</h2>
                             <div className="hex"></div>
                         </div>
