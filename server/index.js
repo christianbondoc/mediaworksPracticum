@@ -8,7 +8,7 @@ var app = express();
 
 
 const server = require("http").Server(app); 
-const port = 10002; 
+const port = process.env.PORT || 10002; 
 
 var io = require("socket.io")(server); 
 
@@ -33,14 +33,46 @@ io.on("connection", function(socket){
 
                 // query for the newUser.
                 var query = hiveDB.collection('users').find({ name: "Christian Bondoc" });
-                // console.log("Users listed below:");
-                // console.log(query);
+                console.log("Users listed below:");
+                var result = query.each(function (err, item) {
+                    console.log("item is:");
+                    console.log(item);
+                });
 
                 db.close();
             });
 
         });
-    });     
+    });  
+    
+    // grabs users for tvapp
+    socket.on("grabUsers", function(data) {
+        MongoClient.connect(url, function (err, db) {
+            if (err) throw err;
+            var hiveDB = db.db("bcit_hive");
+
+            var users = [];
+
+            // query for the selected.
+            var query = hiveDB.collection('users').find({ program: data });
+            console.log("Users listed below:");
+            var result = query.each(function (err, item) {
+                if (item != null) {
+                    console.log("item is:");
+                    console.log(item);
+                    users.push(item);
+                }
+
+                // you've reached the end of the .each()
+                // send over the result to front-end
+                if (item == null) {
+                    socket.emit("displayUsers", users);
+                }
+            });
+
+            db.close();
+        });
+    });
 });
 
 server.listen(port, (err)=>{

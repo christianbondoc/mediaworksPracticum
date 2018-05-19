@@ -6,6 +6,9 @@ import styles from './comp/styles/App.css';
 import PositionApp from './comp/positionApp.js';
 import ConfirmApp from './comp/confirmApp.js';
 
+// Import socket.io-client.
+import mySocket from 'socket.io-client'; 
+
 
 class App extends Component {
     
