@@ -59,13 +59,6 @@ class positionApp extends Component {
                     <div className="container right">
                         <div className="content">
                             <h1 className="intro-center"> Looking for a </h1>
-                            <select className="positionB">
-                                <option value="Graphic Designer"> Graphic Designer </option>
-                                <option value="Web Designer"> Web Designer </option>
-                                <option value="Software Developer"> Software Developer </option>
-                                <option value="Woodworker">Woodworker</option>
-                                <option value="Metal Working">Metal Working</option>
-                                <option value="Applied Data Analytics">Applied Data Analytics</option>
                             <select className="positionB" value={this.state.programSelect} onChange={this.handleSearch}>
                                 <option value="D3 Digital Design Development"> Graphic Designer </option>
                                 <option value="D3 Digital Design Development"> Web Designer </option>
