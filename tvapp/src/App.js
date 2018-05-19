@@ -52,14 +52,9 @@ class App extends Component {
         if (pageNum == 0) {
             comp = (
                 <div className="wrapper">
-                    
-
-
                     <div className="logoImg"> </div>
-
                     <input 
                         ref="testInput"
-                        
                         className="bcitID" 
                         type="text" 
                         placeholder="STUDENT ID" 
@@ -68,8 +63,6 @@ class App extends Component {
                             this.setState({userInput: this.refs.testInput.value});
                             console.log(this.state.userInput);
                             }}
-                        
-
                     />
                     <button className="startBtn" type="submit" onClick={this.signIn}>Sign in</button>
                     <h7 className="signupLink"> Head to (siteName) to register </h7>
@@ -87,6 +80,7 @@ class App extends Component {
         else if (pageNum == 3) {
             comp = <ConfirmApp 
                         changePage={this.changePage}
+                        userInput={this.state.userInput}
                     />;
         }
         

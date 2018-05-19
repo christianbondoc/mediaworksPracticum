@@ -39,6 +39,7 @@ class confirmApp extends Component {
 
         return (
             <div>
+                <div className="blueSquare"></div>
                 {confirmComp}
             </div>
         );

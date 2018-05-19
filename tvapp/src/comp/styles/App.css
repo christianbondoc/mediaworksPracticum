@@ -5,7 +5,7 @@ html, body {
 }
 
 * {
-  font-family: Rajdhani;
+  font-family: Rajdhani, Arial, Helvetica, sans-serif;
 }
   .wrapper {
   display: flex;
@@ -23,7 +23,6 @@ html, body {
 }
 
 .appTitle, .mainTxt, .secondaryTxt{
-  font-size: 10em;
   color: #fff;
   letter-spacing: 2px;
   text-shadow: 2px 2px 6px #000;
@@ -31,7 +30,7 @@ html, body {
 }
 
 .bcitID {
-  font-size: 5em;
+  font-size: 1em;
   background: #f2f2f2;
   width: 15vw;
   height: 5vh;
@@ -58,12 +57,12 @@ html, body {
 }
 
 .startBtn, .confirmBtn {
-  font-size: 5em;
   background: rgba(255, 255, 255, 0);
   color: #FFF0A0;
   border: 5px solid #FFF0A0;
   width: 15vw;
   height: 5vh;
+  font-size: 1em;
 }
 
 .startBtn:active, .confirmBtn:active{
@@ -73,7 +72,6 @@ html, body {
 
 .signupLink {
   color: #f2f2f2;
-  font-size: 4em;
   text-shadow: 2px 2px 6px #000;
   margin: 50px;
 }
@@ -111,7 +109,6 @@ html, body {
 
 .content {
   max-height: 50vh;
-  font-size: 5em;
   letter-spacing: 1px;
 }
 
@@ -144,10 +141,9 @@ html, body {
 }
 
 .positionBtn {
-  font-size: 0.5em;
   width: 30vw;
   height: 5vh;
-  margin: 25px;
+  margin: 10px;
   background: #555B6E;
   color: #f2f2f2;
 }
@@ -173,8 +169,8 @@ html, body {
   background-color: #323232;
   color: #fff;
   text-align: left;
-  font-size: 3em;
 }
+
 
 
 .blueSquare {
@@ -187,10 +183,6 @@ html, body {
   opacity: 0.5;
   transform: rotate(-20deg);
   overflow: hidden;
-}
-.blueSquare:hover {
-
-  animation: blueSquareAni 2s forwards; 
 }
 @keyframes blueSquareAni {
 
